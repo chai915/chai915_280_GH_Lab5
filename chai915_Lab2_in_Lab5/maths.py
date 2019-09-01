@@ -13,15 +13,13 @@ def fibonacci(length):
     def internal(first, second, count):
         third = add(first, second)
         count -= 1
-        if count == 0:
+        if count == 1:
             return third
         else:
             return internal(second, third, count)
-
-    return internal(0, 1, length - 1)
-
-def factorial(number):
-
+         
+    return internal(0, 1, length)
+           
 HEX_CHARS = {
     10: 'A',
     11: 'B',
@@ -46,3 +44,19 @@ def convert_base(num, n):
         new_num_string = remainder_string+new_num_string
         current = current/n
     return new_num_string
+
+
+def factorial(number):
+    fact = 1
+    
+    if number < 0:
+       print("Sorry, factorial does not exist for negative numbers")
+    
+    elif number == 0:
+       fact = 1
+    
+    else:
+       for i in range(1, number + 1):
+           fact = fact * i
+           
+    return fact
