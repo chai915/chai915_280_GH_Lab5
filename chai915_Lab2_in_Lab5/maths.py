@@ -20,6 +20,8 @@ def fibonacci(length):
 
     return internal(0, 1, length - 1)
 
+def factorial(number):
+
 HEX_CHARS = {
     10: 'A',
     11: 'B',

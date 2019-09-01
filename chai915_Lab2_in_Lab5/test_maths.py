@@ -28,7 +28,12 @@ class MathsTest(unittest.TestCase):
         
         self.assertEqual(maths.convert_base(16, 2), '10000')
         self.assertEqual(maths.convert_base(40, 16), '28')
+    
+    def test_factorial(self):
+        ''' Tests the factorial of a number. '''
         
+        self.assertEqual(maths.factorial(4), 24)   
+        self.assertEqual(maths.factorial(1), 1) 
         
 # This allows running the unit tests from the command line (python test_maths.py)
 if __name__ == '__main__':
